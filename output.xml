@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.12.10 on win32)" generated="2026-02-10T13:17:12.936693" rpa="false" schemaversion="5">
+<suite id="s1" name="Car Search Validation" source="c:\Users\HP\Desktop\crm\SGBI_Project\sgbi-inc-sastra-global-business-innovations-test-engineer-automation-ai-systems-team-2\tests\search\car_search_validation.robot">
+<test id="s1-t1" name="Verify Car Search Validation" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-10T13:17:13.206459" level="INFO">Opening browser 'chrome' to base url 'https://morent-car.archisacademy.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-10T13:17:13.206459" elapsed="2.846388"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-10T13:17:16.053420" elapsed="0.033968"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_BTN}</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T13:17:16.088384" elapsed="2.301651"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T13:17:18.390035" level="INFO">Clicking element '//*[@id="rc_select_0"]'.</msg>
+<arg>${SEARCH_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T13:17:18.390035" elapsed="0.084401"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2026-02-10T13:17:18.495450" level="INFO">Current location is 'https://morent-car.archisacademy.com/'.</msg>
+<arg>${URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2026-02-10T13:17:18.474436" elapsed="0.021014"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-10T13:17:33.497559" level="INFO">Slept 15 seconds.</msg>
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-10T13:17:18.496448" elapsed="15.001111"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Search something here']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-10T13:17:33.497559" elapsed="0.020149"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Reached Landing Page Fast!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-10T13:17:33.517708" elapsed="0.003736"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T13:17:33.521444" level="INFO">Clicking element '//*[@id="2"]/div/div/span'.</msg>
+<msg time="2026-02-10T13:17:33.695527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-10T13:17:33.695527" level="FAIL">Element with locator '//*[@id="2"]/div/div/span' not found.</msg>
+<arg>//*[@id="2"]/div/div/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-10T13:17:33.521444" elapsed="0.176077">Element with locator '//*[@id="2"]/div/div/span' not found.</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-10T13:17:33.698395" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-10T13:17:33.699398" elapsed="2.362741"/>
+</kw>
+<status status="FAIL" start="2026-02-10T13:17:13.206459" elapsed="22.855680">Element with locator '//*[@id="2"]/div/div/span' not found.</status>
+</test>
+<status status="FAIL" start="2026-02-10T13:17:12.936693" elapsed="23.125446"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Car Search Validation" id="s1" pass="0" fail="1" skip="0">Car Search Validation</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
