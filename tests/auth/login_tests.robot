@@ -1,10 +1,12 @@
-*** Settings ***
-Documentation     Template for Auth tests
-Resource          ../../resources/keywords.robot
-Resource          ../../resources/locators.robot
+* Settings *
+Library     SeleniumLibrary
+Resource    ../../resources/locators.robot
 
-*** Test Cases ***
-Login Test Template
-    [Documentation]    Placeholder for login test
-    [Tags]    auth
-    Log    Implement login test here
+* Test Cases *
+Login With Valid Credentials
+    Open Browser    ${LOGIN_URL}    chrome
+    Input Text      ${USERNAME_FIELD}    standard_user
+    Input Text      ${PASSWORD_FIELD}    secret_sauce
+    Click Button    ${LOGIN_BUTTON}
+    Page Should Contain    Products
+    Close Browser
